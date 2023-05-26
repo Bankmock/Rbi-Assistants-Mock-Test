@@ -1,71 +1,55 @@
-<!DOCTYPE html>
+<!DOCTYPE html
+</body>
+</html>
 <html>
 <head>
-    <title>Registration Form</title>
+<title>Login and Registration</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    form {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="submit"] {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
 </head>
 <body>
-    <form id="registrationForm" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
+<h1>Login and Registration</h1>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
+<form action="login.php" method="post">
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
+    <input type="email" name="email" placeholder="Email">
+    <input type="submit" value="Login">
+    <input type="submit" value="Register">
+</form>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <input type="submit" value="Register">
-    </form>
-
-    <script>
-        document.getElementById('registrationForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            var username = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
-            var email = document.getElementById('email').value;
-
-            if (username.trim() === '') {
-                alert('Please enter a username.');
-                return;
-            } else if (password.trim() === '') {
-                alert('Please enter a password.');
-                return;
-            } else if (email.trim() === '') {
-                alert('Please enter an email address.');
-                return;
-            }
-
-            // Check if the username already exists
-            var file = 'users.txt'; // Assuming the file is in the same directory as this HTML file
-            var fileRequest = new XMLHttpRequest();
-            fileRequest.open('GET', file, true);
-            fileRequest.onreadystatechange = function() {
-                if (fileRequest.readyState === 4 && fileRequest.status === 200) {
-                    var lines = fileRequest.responseText.split('\n');
-                    for (var i = 0; i < lines.length; i++) {
-                        var parts = lines[i].split(':');
-                        if (parts[0] === username) {
-                            alert('The username already exists.');
-                            return;
-                        }
-                    }
-
-                    // Create a new user and store the data in the text file
-                    var newUser = username + ':' + password + '\n';
-                    var saveRequest = new XMLHttpRequest();
-                    saveRequest.open('POST', file, true);
-                    saveRequest.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-                    saveRequest.onreadystatechange = function() {
-                        if (saveRequest.readyState === 4 && saveRequest.status === 200) {
-                            alert('Registration successful.');
-                        }
-                    };
-                    saveRequest.send('data=' + encodeURIComponent(newUser));
-                }
-            };
-            fileRequest.send();
-        });
-    </script>
 </body>
 </html>
