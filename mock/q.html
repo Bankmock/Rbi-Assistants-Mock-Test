@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+     <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    
+    
+</head>
+          
+    
+  <title>Examsnotification.com</title>
+ 
+  
+<link rel="stylesheet" type="text/css" href="../../css/style4.css">
+
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+  <style>
+      
+      body {
+  margin: 0;
+p add p  padding: 0;
+}
+
+.sidebar {
+  height: 100%;
+  width: 210px;
+  position: fixed;
+  top: 0;
+  right: -250px; /* Start hidden off the screen */
+  background-color: #f1f1f1;
+  padding-top: 20px;
+  transition: right 0.3s ease-in-out; /* Add smooth sliding transition     */
+   z-index:999;
+   overflow-y: scroll;
+}
+
+.content {
+  padding: 20px;
+}
+
+.toggle-buttonr {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+/* Media Queries */
+@media (min-width: 768px) {
+  /* For computer view */
+  .sidebar {
+   
+    right: 0; /* Show sidebar by default on computer view */
+  }
+  .content {
+    margin-right: 250px;
+  }
+  .toggle-button {
+    display: none; /* Hide the toggle button on computer view */
+  }
+  
+.toggle-buttonr {
+  display: none;
+ 
+}
+   #button-holder
+{
+position: fixed;
+bottom:0%;
+left:0%;
+right:0%;
+height:auto;
+width:80%;
+vertical-align: middle;
+display: block;	
+text-align: left;
+padding-top:0.7%;
+padding-bottom:0.7%;
+max-height: 10%;
+z-index: 70;
+}
+}
+
+
+
+  </style>
+</head>
+<body>
+  
+
+ 
+    <!-- Your main content goes here -->
+    
+    <form id="regForm" action="mock.html">
+ <div class="content">
+            <table>
+            
+                <tr>
+                  <td><span class="secgen currclass" id="sec-e0"><b>Quantitative</b></span></td>
+     
+      <td>
+    <b><div id="timer">Left Time: 20:00</div></b>
+    </td>
+   
+  <td>
+  <select id="languageSelect" onchange="changeLanguage()">
+ <option value="en">English</option> <option value="hi">हिन्दी</option>
+    </select>
+  </td><td>
+      
+      
+               
+    <a class="toggle-button" onclick="toggleSidebar()">   <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-layout-sidebar-left-expand" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <rect x="4" y="4" width="16" height="16" rx="2" /> <path d="M9 4v16" /> <path d="M14 10l2 2l-2 2" /> </svg></a>
+      
+  </td>
+                    </tr>
+             
+            </table>
+         
+         <b> <p>Question:  <span id="questionNumber">0</span>/35</p </p> </b>
+          <hr>
+          
+ 
+   <article class="cardq">
+
+
+ 
+             <p id="question">
+                Directions (1-8): Read the following passage and answer the following questions based on the given passage. Some of the words are highlighted which would help you to answer some of the questions given.<br>For Years, World-Wide Organisations Have is increasingly excited about the prospect of a cloud-based future. As the dream becomes an ever closer reality for many kinds of business and, forrester predicted that enterprise spending on cloud services is set to surge IDC also predicted that global spending on public cloud services and infrastructure would not be $ 210bn in 2019, An Increase of 24% from 2018. But one Obstacle Stands Create Friqtion and introduce Risk: The Process of Migration As all indications point to a massive shift, it is more important than ever that the transition from on-premises to cloud is as Risk Free as Possible In today's climate any loss or disruption to Data Can have a Huge Business Impact. It's a Complex Process, is frequently underestimated and many organisations you're not 'like that can go wrong that can impact the Business Organisations across the globe has found the cloud to be an ideal place to run Modern Data applications Due to BIG Data's Elastic Resource requirements Furthermore, with the lack of data for most company today they have beened to be adopt a cloud-first Strategy to ensure business operations are accessible for a range of employees. The Cloud Offers Great Promise for Developers Especially, As It Can Increase The Speed AT Which They Develop Software Features and Increase The resilience of applications once They are deployed - Along with enhanced security through the use of multiple server locations. With all this considered, it is no surprise that 42% of uk businesses leverage some kind of cloud service, According to Eurostat. However, all the perceived benefits of leveraging the cloud are redundant if organisations Come up up up up progress barriers to accessing cloud services. Cloud-based Data Pipelines Still Suffer from Complexity Challenges at the moment, Along with the Lack of Visibility Into Cost And Resource Usage A Application and User Level The answer to this is automation fueled by robust machine learning training model and artificial intelligence. These Concepts and the Tools That Enable Them Can Determine The Prerequisites of Cloud Infrastructure, Application Dependencies, The Appropriate Target Cloud Instance Profiles, And Provide Troubleshooting in Real-Time To summarise, the promise of the cloud has been created a sense of excitement Amongst Enterprises, However, they have proceeded to go full steam Ahead Into Adopting a Cloud Service, Without Sufficient Data to Ensure Performance Service Level Agreements (SLA). <br>
+                             How can we tackle the risks associated with the
+process of migration? </p>
+    <div id="options">
+       <div class="option-wrapper"> A. <input type="radio" name="option" value="0">
+        <label>  By ensuring that organizations only migrate the
+ apps to the cloud that will thrive in the cloud. </label></div>
+        
+  
+<div class="option-wrapper">  B. <input type="radio" name="option" value="1">
+     <label> The surge in the investment in the cloud
+ technology. </label></div>
+      
+     <div class="option-wrapper">  C. <input   type="radio" name="optionr" value="2">
+        <label> The use of predictive power of Artificial
+ Intelligence. </label></div>
+       
+   
+       
+          <div class="option-wrapper">  D. <input   type="radio" name="optionr" value="3">
+        <label> The transition from on-premises to cloud </label></div>
+       
+    
+    
+         <div class="option-wrapper">  E. <input   type="radio" name="optionr" value="4">
+        <label> none of these </label></div>
+       
+    
+    
+  </article>
+     <br>
+           </div>    
+		  <div id="button-holder">
+                  <a> 
+                   <span id="clear" onclick="clearresponsek()">
+                     Clear Response
+                   </span>
+                 </a>
+				 <a> 
+                   <span id="mark" onclick="marknextPrev()">
+                     Marked & Next
+                   </span>
+                 </a>
+                 <a>  
+                   <span id="next" onclick="saveAndNext()">
+                     Save &amp; Next
+                   </span>
+                 </a>
+               </div>
+             </div>
+           </div>
+             
+              
+   
+  </div>		 </form>
+    
+    
+
+
+ <!-- this us side bar  -->
+<div class="sidebar" id="sidebar">
+             
+    <a class="toggle-buttonr" onclick="toggleSidebar()">&times;</a>
+   
+           <div id="right-container-post" style="display: block;">
+             <div id="cand-time-outer">
+                           
+              
+    
+               <div id="cand-image">
+                 <img src="../../images/photograph.png">
+               </div> 
+               
+               <div id="timer">
+                 <b> Time Left: <span id="some_div"></span> </b> <br>
+				 <b> Answered: <span id="quetion"></span> </b><br>
+                 <i>your name</i>
+               </div>
+               
+               </div> 
+               
+               
+               
+             <div id="right-low-half-outer">
+                
+                
+                <div id="legend">
+                 <b>Legend</b>
+                 <table>
+                   <tbody>
+                     <tr>
+                       <td><span id="stic-answered" class="icons-status stic-answered">0</span> Answered &nbsp;&nbsp;&nbsp;</td>
+                       <td><span id="stic-notanswered" class="icons-status stic-notanswered">0</span> Not Answered</td>
+                     </tr>
+                     <tr>
+                       <td><span id="stic-marked" class="icons-status stic-marked">0</span> Marked &nbsp;&nbsp;&nbsp;</td>
+                       <td><span id="stic-notvisited" class="icons-status stic-notvisited">0</span> Not Visited</td>
+                     </tr>
+                   </tbody>
+                 </table>
+               </div>
+
+               
+               <div id="question-main-pallette">
+                 <table>
+                   <tbody>
+ <tr><td><a id="sprite-butts1" class="sprite-butts" onclick="nextbtton(0)"><br>1</a></td>
+ <td><a id="sprite-butts2" class="sprite-butts" onclick="nextbtton(1)"><br>2</a></td>
+ <td><a id="sprite-butts3" onclick="nextbtton(2)"class="sprite-butts"><br>3</a></td>
+ <td><a id="sprite-butts4" class="sprite-butts" onclick="nextbtton(3)"><br>4</a></td></tr> <tr></tr>
+ <tr><td><a id="sprite-butts5" class="sprite-butts" onclick="nextbtton(4)"><br>5</a></td>
+ <td><a id="sprite-butts6" class="sprite-butts" onclick="nextbtton(5)"><br>6</a></td>
+<td><a id="sprite-butts7" class="sprite-butts" onclick="nextbtton(6)"><br>7</a></td>
+<td><a id="sprite-butts8" class="sprite-butts" onclick="nextbtton(7)"><br>8</a></td></tr><tr></tr>
+<tr><td><a id="sprite-butts9" class="sprite-butts" onclick="nextbtton(8)"><br>9</a></td>
+ <td><a id="sprite-butts10" class="sprite-butts" onclick="nextbtton(9)"><br>10</a></td>
+<td><a id="sprite-butts11" class="sprite-butts" onclick="nextbtton(10)"><br>11</a></td>
+<td><a id="sprite-butts12" class="sprite-butts" onclick="nextbtton(11)"><br>12</a></td></tr> <tr></tr>
+<tr><td><a id="sprite-butts13" class="sprite-butts" onclick="nextbtton(12)"><br>13</a></td>
+<td><a id="sprite-butts14" class="sprite-butts" onclick="nextbtton(13)"><br>14</a></td>
+<td><a id="sprite-butts15" class="sprite-butts" onclick="nextbtton(14)"><br>15</a></td>
+<td><a id="sprite-butts16" class="sprite-butts" onclick="nextbtton(15)"><br>16</a></td></tr>
+<tr></tr>
+<tr><td><a id="sprite-butts17" class="sprite-butts" onclick="nextbtton(16)"><br>17</a></td>
+<td><a id="sprite-butts18" class="sprite-butts" onclick="nextbtton(17)"><br>18</a></td>
+<td><a id="sprite-butts19" class="sprite-butts" onclick="nextbtton(18)"><br>19</a></td>
+<td><a id="sprite-butts20" class="sprite-butts" onclick="nextbtton(19)"><br>20</a></td></tr><tr></tr>
+<tr><td><a id="sprite-butts21"  class="sprite-butts" onclick="nextbtton(20)"><br>21</a></td
+><td><a id="sprite-butts22" class="sprite-butts" onclick="nextbtton(21)"><br>22</a></td>
+<td><a id="sprite-butts23" class="sprite-butts" onclick="nextbtton(22)"><br>23</a></td>
+<td><a id="sprite-butts24" class="sprite-butts" onclick="nextbtton(23)"><br>24</a></td></tr><tr></tr>
+<tr><td><a id="sprite-butts25" class="sprite-butts" onclick="nextbtton(24)"><br>25</a></td>
+<td><a id="sprite-butts26" class="sprite-butts" onclick="nextbtton(25)"><br>26</a></td>
+<td><a id="sprite-butts27" class="sprite-butts" onclick="nextbtton(26)"><br>27</a></td>
+<td><a id="sprite-butts28" class="sprite-butts" onclick="nextbtton(27)" ><br>28</a></td></tr><tr></tr>
+<tr><td><a id="sprite-butts29" class="sprite-butts" onclick="nextbtton(28)"><br>29</a></td>
+<td><a id="sprite-butts30" onclick="nextbtton(29)" class="sprite-butts"><br>30</a></td>
+<td><a id="sprite-butts31" class="sprite-butts" onclick="nextbtton(30)"><br>31</a></td>
+<td><a id="sprite-butts32" class="sprite-butts" onclick="nextbtton(31)"><br>32</a></td></tr>
+<tr></tr>
+
+<tr><td><a id="sprite-butts33" class="sprite-butts" onclick="nextbtton(32)"><br>33</a></td>
+<td><a id="sprite-butts34" class="sprite-butts" onclick="nextbtton(33)"><br>34</a></td>
+<td><a id="sprite-butts35" class="sprite-butts" onclick="nextbtton(34)"><br>35</a></td>
+</tr><tr></tr>
+
+</tbody></table>
+               </div>
+               
+               <div id="button-bottom">
+                   <hr>
+                   <br>
+                <table cellpadding="2" cellspacing="10">
+                  <tbody>
+                     
+                    <tr>
+                      <td>
+                       
+                          <div id="b3" style="background-color: rgb(199, 220, 240); color: rgb(0, 0, 0);">
+                              ..
+                          </div>
+                         
+                      </td>
+                      <td>
+                          
+                        <a onclick="doSomething()">
+                          <div id="b4">
+                                           Submit
+                           </div>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+    
+    </div>
+    </div>
+    
+  </div>
+
+
+
+ 
+ <script src="../../js/sidebar.js"></script>
+    <script src="qquebuttonpall.js"></script>
+ 
+ <script src="q.js"></script>
+    <script src="../../js/timer.js"></script>
+</body>
+</html>
