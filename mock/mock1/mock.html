@@ -1,0 +1,591 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+    #progress-bar {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      margin-left: 26%;
+    }
+    
+    #progress-bar svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotate(-90deg);
+    }
+    
+    #progress-bar .circle-background {
+      fill: none;
+      stroke: green;
+      stroke-width: 10;
+    }
+    
+    #progress-bar .circle-progress {
+      fill: none;
+      stroke: white;
+      stroke-width: 10;
+      
+      stroke-dasharray: 0, 251.2; /* Sets the initial progress to 0 */
+      transition: stroke-dasharray 1s ease;
+    }
+    
+    #progress-bar .score-card {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: Arial, sans-serif;
+      text-anchor: middle;
+    }
+  </style>
+</head>
+<body>
+  <div id="progress-bar">
+    <svg viewBox="0 0 100 100">
+      <circle class="circle-background" cx="50" cy="50" r="40" />
+      <circle class="circle-progress" cx="50" cy="50" r="40" />
+    </svg>
+    <div class="score-card">0%</div>
+  </div>
+  
+  <script>
+      setInterval(function() {
+        // Code to be executed every 2 seconds
+       
+    function getProgress() {
+      // Retrieve progress from ID or local storage
+      // Example: Retrieve from an input field with ID 'progress-input'
+      const inputElement = document.getElementById('progress-input');
+      if (inputElement) {
+        const progress = parseFloat(inputElement.value);
+        return isNaN(progress) ? 0 : progress;
+      }
+      
+      // Retrieve from local storage
+      const storedProgress = localStorage.getItem('progress');
+      return storedProgress ? parseFloat(storedProgress) : 0;
+    }
+    
+    function setProgress(progress) {
+      const circle = document.querySelector('#progress-bar .circle-progress');
+      const scoreCard = document.querySelector('#progress-bar .score-card');
+      const radius = circle.r.baseVal.value;
+      const circumference = radius * 2 * Math.PI;
+      const offset = circumference - progress / 100 * circumference;
+      
+      circle.style.strokeDasharray = `${offset}, ${circumference}`;
+      scoreCard.textContent = `${progress}%`;
+    }
+    
+    // Example usage:
+    
+    const progressValue = parseFloat(tmarks);
+    setProgress(progressValue); 
+    // Sets progress based on retrieved value
+    
+    
+   
+      }, 2000);
+    
+  </script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    
+  <title>Exam Subjects</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+    <link rel="stylesheet" type="text/css" href="allsign.css">
+    
+    
+     <style>
+    .right-sign {
+      color: green;
+    }
+
+    .wrong-sign {
+      color: red;
+    }
+
+    .skip-sign {
+      color: orange;
+    }
+  </style>
+  
+  <style>
+      
+      
+   html *
+{
+-webkit-user-select:none !important;
+-moz-user-select: -moz-none !important;
+-ms-user-select: none !important;
+user-select: none !important;
+}
+      
+      
+      body {
+          
+         background-color: #f5f5f5;
+          
+      }
+      
+      
+      .card-container1 {
+      white-space: nowrap;
+      overflow-x: auto;
+    }
+      
+      .card1 {
+      background-color: white;
+      border-radius: 8px;
+      
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+      height: 84px;
+      width: 124px;
+      float: Left;
+      margin-Left: 13px;
+    overflow-y: hidden;
+     overflow-x: hidden;
+    }
+      
+      
+      
+    
+    
+    
+ 
+
+    .green-element {
+      background-color: rgba(0, 128, 0, 0.5); /* Green */
+      color: green;
+      
+          }
+
+    .brown-element {
+      background-color: rgba(139, 69, 19, 0.5); /* Brown */
+      color: brown;    }
+
+    .blue-element {
+      background-color: rgba(0, 0, 255, 0.5); /* Blue */
+      
+      color: blue;    }
+
+    
+
+
+
+
+    .custom-element {
+      background-color: rgba(244, 113, 16, 0.73); /* #F47110BB */
+    }
+  
+  
+  
+  
+  
+  
+  
+  
+  .card-container2 {
+      white-space: nowrap;
+      overflow-x: auto;
+    }
+
+    .card2 {
+      display: inline-block;
+      width: 140px;
+      height: 84px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     padding: 20px;
+      margin-bottom: 20px;
+      
+      
+      
+    }
+
+    .card2 h2 {
+      margin-top: 0;
+      font-size: 19px;
+    }
+
+    .card2 p {
+      margin-bottom: 10px;
+    }
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    
+    .card-container {
+      white-space: nowrap;
+      overflow-x: auto;
+    }
+
+    .card {
+      display: inline-block;
+      width: 200px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+     margin-right: 10%;
+      
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 19px;
+    }
+
+    .card p {
+      margin-bottom: 10px;
+    }
+
+
+  
+#score {
+        font-size: 33px;
+    }
+     
+#rank {
+        font-size: 33px;
+    }
+     
+
+
+
+#tcorrectCount {
+        font-size: 33px;
+    }
+     #twrongCount {
+        font-size: 30px;
+   }
+    #tskiped {
+        font-size: 30px;
+    }
+
+
+#tcorrectanser {
+font-size: 30px;
+    }
+  
+    #ecorrectCount {
+        font-size: 33px;
+    }
+     #ewrongCount {
+        font-size: 30px;
+   }
+    #eskiped {
+        font-size: 30px;
+    }
+    
+    
+    
+    #rcorrectCount {
+        font-size: 33px;
+    }
+     #rwrongCount {
+        font-size: 30px;
+   }
+    #rskiped {
+        font-size: 30px;
+    }
+    
+    #qcorrectCount {
+        font-size: 33px;
+    }
+     #qwrongCount {
+        font-size: 30px;
+   }
+    #qskiped {
+        font-size: 30px;
+    }
+   #tcorrectanser {
+font-size: 30px;
+    }
+      .clearr {
+        font-size: 30px;
+    }  .clearr {
+        font-size: 30px;
+    }
+  </style>
+</head>
+<body onunload="myFunction()" >
+    
+    <h2>Bankers Mock </h2>
+    
+    <div class="card-container2">
+        
+   <div class="card2 green-element">
+       Score <i class="fas fa-star score-sign"></i><br>
+    <p><span id="score"></span>/100</p>
+   
+  </div>
+  
+
+     
+   <div class="card2 green-element">
+      Rank<i class="fas fa-trophy ranking-sign"></i><br>
+    <p><span id="rank"></span>/010</p>
+   
+  </div>
+     
+   
+ 
+  
+  </div>
+    
+    <h3>Total Analysis</h3>
+    
+    
+   
+    
+    
+    
+    <div class="card-container1">
+        
+   <div class="card1 green-element">
+       <i class="fas fa-check-circle right-sign"></i> <br><span>Correct</span>
+    <p><span id="tcorrectCount"></span>/100</p>
+   
+  </div>
+
+  <div class="card1 brown-element ">
+      <i class="fas fa-times-circle wrong-sign"></i><br><span>Wrong</span>
+      <p><span id="twrongCount"></span>/100</p>
+  </div>
+
+  <div class="card1 blue-element ">
+   <i class="fas fa-question-circle skip-sign"></i><br><span>Skiped</span>
+   <p><span id="tskiped"></span>/100</p>
+  </div>
+  
+  <div class="card1 custom-element ">
+   <span>Attempts</span>
+   <p><span id="tcorrectanser"></span>/100</p>
+  </div>
+  
+  </div>
+   <h3>Section</h3>
+   
+    
+    <div class="card-container">
+  <div class="card">
+    <h2 >English</h2>
+    <hr>
+  
+    <p>Correct ! : <span id="ecorrectCount">30</span>/30</p>
+    <p>Wrong ! : <span id="ewrongCount"></span>/30</p>
+    <p>Skiped ! : <span id="eskiped">30</span>/30</p>
+  </div>
+
+  <div class="card">
+    <h2>Quantitative Aptitude</h2>
+     <hr>
+    
+    <p>Correct ! : <span id="qcorrectCount">30</span>/30</p>
+    <p>Wrong ! : <span id="qwrongCount">30</span>/30</p>
+    <p>Skipped ! : <span id="qskiped">30</span>/30</p>
+  </div>
+
+  <div class="card">
+    <h2>Reasoning</h2>
+      <hr>
+    
+    <p>Correct ! : <span id="rcorrectCount">30</span>/30</p>
+    <p>Wrong ! : <span id="rwrongCount">30</span>/30</p>
+    <p>Skiped ! : <span id="rskiped">30</span>/30</p>
+  
+  </div>
+  
+  <hr>
+  
+ if you want to Restart this mock than you need to Clear data click  " "Clear" button.<br>
+<button class="clearr" class="clearr" onclick="myFunction()"> Clear & Delete </button><br>
+  
+  
+  
+  </div>
+  
+  
+  
+  
+  <script>
+      
+      
+      
+      
+     
+      
+      
+      let ecorrectCount = parseFloat(localStorage.getItem('ecorrectCount'), 10);
+     
+      
+ let qcorrectCount = parseFloat(localStorage.getItem('qcorrectCount'), 10);
+ 
+  
+   
+ let  rcorrectCount = parseFloat(localStorage.getItem('rcorrectCount'), 10);
+ 
+   
+       let tcorrectCount = (ecorrectCount) + (qcorrectCount) + (rcorrectCount);
+       
+document.getElementById("tcorrectCount").innerHTML = tcorrectCount;
+
+
+
+
+
+
+
+let emarks = parseFloat(localStorage.getItem('emarks'), 10);
+     
+      
+ let qmarks = parseFloat(localStorage.getItem('qmarks'), 10);
+ 
+  
+   
+ let  rmarks = parseFloat(localStorage.getItem('rmarks'), 10);
+ 
+   
+       let tmarks = (emarks) + (rmarks) + (qmarks);
+       
+
+
+
+
+document.getElementById("score").innerHTML = tmarks;
+    
+
+ 
+let ewrongCount = parseFloat(localStorage.getItem('ewrongCount'), 10);
+     
+        
+ let qwrongCount = parseFloat(localStorage.getItem('qwrongCount'), 10);
+  
+   
+ let  rwrongCount = parseFloat(localStorage.getItem('rwrongCount'), 10);
+   
+   
+       let twrongCount = (ewrongCount) + (qwrongCount) + (rwrongCount);
+ document.getElementById("twrongCount").innerHTML = twrongCount;
+ 
+  let  tcorrectanser  = (tcorrectCount) + (twrongCount);
+      document.getElementById("tcorrectanser").innerHTML = tcorrectanser;
+
+let eskiped = parseFloat(localStorage.getItem('eskiped'), 10);
+      
+ let qskiped = parseFloat(localStorage.getItem('qskiped'), 10);
+ 
+ let  rskiped = parseFloat(localStorage.getItem('rskiped'), 10);
+ 
+       let tskiped = (eskiped) + (qskiped) + (rskiped);
+ document.getElementById("tskiped").innerHTML = tskiped;
+
+
+// english
+
+
+
+
+document.getElementById("ecorrectCount").innerHTML = ecorrectCount;
+ document.getElementById("ewrongCount").innerHTML = ewrongCount;
+
+ document.getElementById("eskiped").innerHTML = eskiped;
+
+
+
+
+// quant 
+
+
+
+ document.getElementById("qcorrectCount").innerHTML = qcorrectCount;
+ document.getElementById("qwrongCount").innerHTML = qwrongCount;
+
+ document.getElementById("qskiped").innerHTML = qskiped;
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ //resoning
+ 
+ 
+ document.getElementById("rcorrectCount").innerHTML = rcorrectCount;
+ document.getElementById("rwrongCount").innerHTML = rwrongCount;
+
+ document.getElementById("rskiped").innerHTML = rskiped;
+ 
+</script>
+
+
+<script> 
+     
+       function myFunction() {
+
+        
+        
+        
+        
+        localStorage.removeItem('emarks');
+          localStorage.removeItem('qmarks'); 
+    localStorage.removeItem('rmarks');
+        
+        
+        
+         localStorage.removeItem('ecorrectCount');
+          localStorage.removeItem('qcorrectCount'); 
+    localStorage.removeItem('rcorrectCount');
+   localStorage.removeItem('tcorrectCount');
+  
+localStorage.removeItem('qwrongCount'); 
+
+   
+localStorage.removeItem('ewrongCount');
+localStorage.removeItem('rwrongCount');
+ localStorage.removeItem('twrongCount');
+  localStorage.removeItem('tcorrectanser');
+localStorage.removeItem('eskiped');
+  localStorage.removeItem('qskiped');
+  
+   
+ localStorage.removeItem('rskiped');
+  localStorage.removeItem('tskiped');
+  
+}
+</script>
+
+</body>
+</html>
+
